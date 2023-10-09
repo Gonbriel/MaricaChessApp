@@ -4,8 +4,6 @@
    2 - Cadastro de jogadores
    3 - Cálculo de rating                                  """
 
-
-
 class Players():
     def __init__(self, nome, idade, rating, clube):
         self.nome = nome
@@ -19,5 +17,3 @@ class Torneios():
         self.tipo = tipo
         self.data = data
         self.local = local
-
-
