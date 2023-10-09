@@ -6,7 +6,7 @@
 
 
 
-class Palyers():
+class Players():
     def __init__(self, nome, idade, rating, clube):
         self.nome = nome
         self.idade = idade
@@ -19,3 +19,5 @@ class Torneios():
         self.tipo = tipo
         self.data = data
         self.local = local
+
+
