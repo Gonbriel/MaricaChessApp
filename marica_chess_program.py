@@ -5,9 +5,11 @@
    3 - Cálculo de rating                                  """
 
 class Players():
-    def __init__(self, nome, idade, rating, clube):
+    def __init__(self, nome, idade, email, telefone, rating, clube):
         self.nome = nome
         self.idade = idade
+        self.email = email
+        self.telefone = telefone
         self.rating = rating
         self.clube = clube
 
@@ -30,3 +32,4 @@ class Torneios():
             self.jogadores.remove(jogador)
         else:
             print(f"O jogador {jogador.nome} não está na lista de jogadores deste torneio.")
+
