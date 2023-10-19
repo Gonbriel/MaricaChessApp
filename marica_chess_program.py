@@ -6,22 +6,22 @@
 
 class Players():
     def __init__(self, nome, idade, email, telefone, rating, clube):
-        self.nome = nome
-        self.idade = idade
-        self.email = email
-        self.telefone = telefone
-        self.rating = rating
-        self.clube = clube
+        self._nome = nome.tittle()
+        self._idade = idade
+        self._email = email
+        self._telefone = telefone
+        self._rating = rating
+        self._clube = clube
 
     def __str__(self):
-        return f'Nome: {self.nome}, Idade: {self.idade}, Rating: {self.rating}, Clube: {self.clube}'
+        return f'Nome: {self._nome}, Idade: {self._idade}, Rating: {self._rating}, Clube: {self._clube}'
 
 class Torneios():
     def __init__(self, nome, tipo, data, local):
-        self.nome = nome
-        self.tipo = tipo
-        self.data = data
-        self.local = local
+        self._nome = nome
+        self._tipo = tipo
+        self._data = data
+        self._local = local
         self.jogadores = []
 
     def add_player(self, jogador):
