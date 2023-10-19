@@ -6,7 +6,7 @@
 
 class Players():
     def __init__(self, nome, idade, email, telefone, rating, clube):
-        self._nome = nome.tittle()
+        self._nome = nome.title()
         self._idade = idade
         self._email = email
         self._telefone = telefone
