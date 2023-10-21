@@ -49,8 +49,8 @@ class Players():
     def telefone(self):
         return self._telefone
 
-    @email.setter
-    def email(self, novo_telefone):
+    @telefone.setter
+    def telefone(self, novo_telefone):
         self._telefone = novo_telefone
 
     @property
