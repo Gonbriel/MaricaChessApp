@@ -79,13 +79,9 @@ class Torneios():
         self._tipo = tipo
         self._data = data
         self._local = local
-        self.jogadores = []
 
     def add_player(self, jogador):
-        self.jogadores.append(jogador)
+        pass
 
     def delete_player(self, jogador):
-        try:
-            self.jogadores.remove(jogador)
-        except ValueError:
-            raise ValueError(f"O jogador {jogador.nome} não está na lista de jogadores deste torneio.")
+        pass
