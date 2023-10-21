@@ -70,7 +70,8 @@ class Players():
         self._clube = novo_clube.upper()
 
     def __str__(self):
-        return f'Nome: {self._nome}, Idade: {self._idade}, Rating: {self._rating}, Clube: {self._clube}'
+        return f'Nome: {self._nome}, Idade: {self._idade}, Rating: {self._rating}, Clube: {self._clube},' \
+               f'E-mail: {self.email}'
 
 class Torneios():
     def __init__(self, nome, tipo, data, local):
