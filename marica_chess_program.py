@@ -73,6 +73,31 @@ class Players():
         return f'Nome: {self._nome}, Idade: {self._idade}, Rating: {self._rating}, Clube: {self._clube},' \
                f'E-mail: {self.email}'
 
+    def cadastrar_jogador(self):
+        conn = sqlite3.connect('jogadores_clube.db')
+        cursor = conn.cursor()
+
+        try:
+            cursor.execute('''CREATE TABLE IF NOT EXISTS jogadores
+            (nome TEXT, idade INTEGER,  email TEXT, telefone TEXT, rating REAL, clube TEXT)''')
+
+            cursor.execute('''SELECT * FROM jogadores WHERE nome=? AND clube=?''',
+                           (self._nome, self._clube))
+            jogador_existente = cursor.fetchone()
+
+            if jogador_existente:
+                print(f'O jogador {self._nome} já está cadastrado no clube {self._clube}.')
+            else:
+                cursor.execute('''INSERT INTO jogadores VALUES(?, ?, ?, ?, ?, ?)''',
+                               (self._nome, self._idade, self.email, self._telefone, self._rating, self._clube))
+
+                conn.commit()
+                print(f'Jogador {self._nome} cadastrado com sucesso!')
+        except Exception as e:
+            print(f'Erro ao cadastrar jogador: {e}')
+        finally:
+            conn.close()
+
 class Torneios():
     def __init__(self, nome, tipo, data, local):
         self._nome = nome
