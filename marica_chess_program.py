@@ -4,7 +4,7 @@
    2 - Cadastro de jogadores
    3 - Cálculo de rating                                  """
 
-import re
+import re, sqlite3
 
 class Players():
     def __init__(self, nome, idade, email, telefone, rating, clube):
